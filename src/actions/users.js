@@ -3,7 +3,6 @@ import axios from 'axios';
 export const initiateAddUsers = () => {
   return (dispatch) => {
     return axios.get('/users').then((response) => {
-      console.log(response.data);
       return dispatch(addUsers(response.data.results));
     });
   };
